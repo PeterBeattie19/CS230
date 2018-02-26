@@ -12,10 +12,12 @@ average = function(){
         		else if(table.rows[r].cells[c].innerHTML != "")
             		total += parseInt(table.rows[r].cells[c].innerHTML);
                 
+            
+            //if(table.rows[r].cells[c].innerHTML.matches("[0-9]{1,2}") == '1')
             if(parseInt(table.rows[r].cells[c].innerHTML) < 40)
             		table.rows[r].cells[c].style = "color:red"; 
             else
-            	table.rows[r].cells[c].style = "colot:black"; 
+            	table.rows[r].cells[c].style = "color:black"; 
         }
         
         table.rows[r].cells[7].innerHTML = Math.round(total/5) +"%";
@@ -37,11 +39,12 @@ average = function(){
 
 setInterval(function() {
   average();
-}, 1);
+}, 1); 
 
  addRow = function(){
 	var table = document.getElementById('table');
   table.contentEditable = 'true';
+  
   
   var row = table.insertRow(table.rows.lenth); 
  
@@ -62,17 +65,14 @@ setInterval(function() {
   cell6.innerHTML = "-";
   cell7.innerHTML = "-";
   cell8.innerHTML = "-";
+  
+ 
+  cell3.align = "right"; 
+  cell4.align = "right"; 
+  cell5.align = "right"; 
+  cell6.align = "right"; 
+  cell7.align = "right"; 
+  cell8.align = "right"; 
 
 	
-}
-
-clear = function(){
-		var table = document.getElementById('table');
-    
-    for (var r = 1; r < table.rows.length; r++) {
-        for (var c = 0; c < table.rows[r].cells.length; c++) {
-        
-        		table.rows[r].cells[c].innerHTML = "-";
-        }
-    }
 }
