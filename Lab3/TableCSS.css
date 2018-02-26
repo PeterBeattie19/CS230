@@ -1,6 +1,14 @@
-table{
-  
-  font-family:verdana; 
+table, th, td {
+    font-family:verdana; 
   font-size: 100%;
+   border: 3px solid black;
 }
 
+button {
+  border:none;
+  background-color:#008CBA;
+  padding:7px 7px;
+  display: inline-block;
+  margin-top:20px;
+  margin-left: 150px;
+}
