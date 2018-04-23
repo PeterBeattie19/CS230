@@ -1,0 +1,140 @@
+ <html>
+
+
+<body>
+
+
+    <header>
+        <h1>Assigment 5</h1>
+    </header>
+
+<style>
+
+
+input {
+    margin:5px;
+    font-family: sans-serif;
+
+}
+
+h3{
+    font-family: sans-serif;
+    text-align-last: center; 
+}
+
+form{
+	font-family: sans-serif;
+	text-align-last: center;
+}
+
+
+input[type=submit] {
+  background-color: #ff9933;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=text], select, textarea{
+  width: 10%;
+  padding: 12px;
+  border: 1px solid #5e5959;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+
+}
+
+  body {
+      margin: 0;
+      font-family: 'Karla', sans-serif;
+  }
+  
+  header {
+      width: 100vw;
+      height: 80vh;
+      top: 0;
+      left: auto;
+      background: url("landscape.jpg") center top no-repeat;
+      background-size: cover;
+  }
+  
+
+  
+  header h1 {
+      color: #fff;
+      z-index: 10000;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+  }
+
+
+  
+
+</style>
+
+<h3>Add Entry</h3>
+
+<form action="../Service/insert.php" method="get">
+Name: <input type="text" name="name"><br>
+URL: <input type="text" name="URL"><br>
+Description: <input type="text" name="description"><br>
+<input type="submit">
+</form>
+
+
+
+
+
+
+<h3>Update Entry, by ID number</h3>
+
+<form action="../service/update.php" method="get">
+ID: <input type="text" name="id"><br>
+Name: <input type="text" name="name"><br>
+URL: <input type="text" name="URL"><br>
+Description: <input type="text" name="description"><br>
+<input type="submit" value="Update">
+</form>
+
+
+
+<h3>Delete Entry, by ID number</h3>
+
+
+<form action="../service/delete.php" method="get">
+ID: <input type="text" name="id"><br>
+<input type="submit" value="Delete">
+</form>
+
+<h3>Get Entry, by ID number</h3>
+
+
+<form action="../service/select.php" method="get">
+ID: <input type="text" name="id"><br>
+<input type="submit" value="Get">
+</form>
+
+
+<h3>Get Entry, by Name</h3>
+
+
+<form action="../service/select_by_name.php" method="get">
+Name: <input type="text" name="name"><br>
+<input type="submit" value="Get">
+</form>
+
+
+
+</body>
+</html> 
+
+
+
